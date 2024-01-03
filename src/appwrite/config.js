@@ -1,4 +1,3 @@
-import { Service } from 'appwrite/types/service'
 import conf from '../conf/conf'
 import { Client, ID, Databases, Storage, Query} from "appwrite"
 
@@ -30,7 +29,7 @@ export class Service{
                 }
             )
         } catch (error) {
-            throw error
+            console.log("Appwrite servicee :: createPost :: error", error)
         }
     }
 
@@ -48,7 +47,7 @@ export class Service{
                 }
             )
         } catch (error) {
-            throw error
+            console.log("Appwrite servicee :: updatePost :: error", error)
         }
     }
 
@@ -61,7 +60,7 @@ export class Service{
             )
             return true
         } catch (error) {
-            throw error
+            console.log("Appwrite servicee :: deletePost :: error", error)
             return false
         }
     }
@@ -74,7 +73,8 @@ export class Service{
                 slug
             )
         } catch (error){
-            throw error
+            console.log("Appwrite servicee :: getPost :: error", error)
+
             return false
         }
     }
@@ -87,7 +87,7 @@ export class Service{
                 queries,
              )
         } catch (error) {
-            throw error;
+            console.log("Appwrite servicee :: getPosts :: error", error)
             return false
         }
     }
@@ -102,7 +102,7 @@ export class Service{
                 file
             )
         } catch (error) {
-            throw error
+            console.log("Appwrite servicee :: uploadFile :: error", error)
             return false
         }
     }
@@ -115,7 +115,7 @@ export class Service{
             )
             return true
         } catch (error) {
-            throw error
+            console.log("Appwrite servicee :: deleteFile :: error", error)
             return false
         }
     }
@@ -123,7 +123,7 @@ export class Service{
     getFilePreview(fileId){
         return this.bucket.getFilePreview(
             conf.appwriteBucketId,
-        fileId
+            fileId
         )
     }
 }
