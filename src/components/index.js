@@ -4,6 +4,11 @@ import Container from "postcss/lib/container";
 import Logo from "./Logo";
 import LogoutBtn from "./Header/LogoutBtn";
 import RTE from "./RTE";
+import Signup from "./Signup";
+import Login from './Login';
+import PostForm from './post-form/PostForm';
+import PostCards from './PostCards'
+import AuthLayout from './Authlayout'
 
 export {
     Header,
@@ -11,5 +16,10 @@ export {
     Container,
     Logo,
     LogoutBtn,
-    RTE
+    RTE,
+    Signup,
+    Login,
+    PostForm,
+    PostCards,
+    AuthLayout
 }
