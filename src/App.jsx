@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import './App.css'
@@ -29,7 +28,7 @@ function App() {
       <div className='w-full block'>
         <Header />
         <main>
-          todo  {/* <Outlet /> */}
+          ToDo  <Outlet />
         </main>
         <Footer />
       </div>
