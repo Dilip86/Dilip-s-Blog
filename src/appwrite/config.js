@@ -25,11 +25,11 @@ export class Service{
                     content,
                     featuredImage,
                     status,
-                    userId,
+                    userid: userId
                 }
             )
         } catch (error) {
-            console.log("Appwrite serive :: createPost :: error", error);
+            throw error
         }
     }
 
