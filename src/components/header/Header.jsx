@@ -38,7 +38,7 @@ function Header() {
       name: "Edit Post",
       slug: "/edit-post",
       active: authStatus,
-    },
+    }
 
   ]
 
